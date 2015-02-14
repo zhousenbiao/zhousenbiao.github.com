@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     
-    <title>IT Boy</title>
+    <title>start bolg with pelican | IT Boy</title>
     <meta name="author" content="Bill Zhou">
     
     <meta name="description" content="IT,information technology,boys,java,php,c#,python,js">
@@ -12,7 +12,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    
+    <meta property="og:title" content="start bolg with pelican"/>
     <meta property="og:site_name" content="IT Boy"/>
 
     <link rel="alternate" href="/atom.xml" title="IT Boy" type="application/atom+xml">
@@ -166,282 +166,198 @@
     </header>
     <div id="content-wrapper">
         <div class="container-center">
-        <div id="article-list">
+        <article class="post.md">
+    <div class="article-title article-title-big">
+        
     
-        <article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="2015-02-14T14:44:15.499Z">2月 14 2015</time>
-            </div>
-            
-                <div class="tags-row">
-                
-                    <a href="/tags/hexo/" class="btn btn-info">hexo</a>
-                
-                </div>
-            
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                
-    
-        <h1><a href="/2015/02/14/hexo-themes/">my favourite hexo themes</a></h1>
+        <h1>start bolg with pelican</h1>
     
 
-            </div>
-            
-        </div>
     </div>
-    <div class="split-line"></div>
-</article>
 
-    
-        <article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="2015-02-14T14:40:06.974Z">2月 14 2015</time>
-            </div>
-            
-                <div class="tags-row">
-                
-                    <a href="/tags/google/" class="btn btn-info">google</a>
-                
-                </div>
-            
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                
-    
-        <h1><a href="/2015/02/14/google10/">google 10</a></h1>
-    
-
-            </div>
-            
-        </div>
+    <div class="date-row ">
+        <time datetime="2015-02-10T02:17:35.000Z">2月 10 2015</time>
     </div>
-    <div class="split-line"></div>
-</article>
 
-    
-        <article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="2015-02-14T11:38:09.840Z">2月 14 2015</time>
-            </div>
-            
-                <div class="tags-row">
-                
-                </div>
-            
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                
-    
-        <h1><a href="/2015/02/14/somebody-s-yueli/"></a></h1>
-    
-
-            </div>
-            
-        </div>
+    <div class="toc-wrap">
+        <div class="toc-title">目录</div>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#下载风格包pelican-themes与插件包pelican-plugins"><span class="toc-number">1.</span> <span class="toc-text">下载风格包pelican-themes与插件包pelican-plugins</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pelicanconf-py配置"><span class="toc-number"></span> <span class="toc-text">pelicanconf.py配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置_publishconf-py"><span class="toc-number"></span> <span class="toc-text">配置 publishconf.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模版"><span class="toc-number"></span> <span class="toc-text">模版</span></a>
     </div>
-    <div class="split-line"></div>
-</article>
 
-    
-        <article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="2015-02-14T11:38:09.836Z">2月 14 2015</time>
-            </div>
-            
-                <div class="tags-row">
-                
-                </div>
-            
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                
-    
-        <h1><a href="/2015/02/14/hello-world/">Hello World</a></h1>
-    
+    <div class="entry">
+        <h4 id="下载风格包pelican-themes与插件包pelican-plugins">下载风格包pelican-themes与插件包pelican-plugins</h4>
+<p>git clone git://github.com/getpelican/pelican-themes.git</p>
+<p>git clone git://github.com/getpelican/pelican-plugins.git</p>
+<h3 id="pelicanconf-py配置">pelicanconf.py配置</h3>
+<pre><code><span class="comment">#!/usr/bin/env python</span>
+<span class="comment"># -*- coding: utf-8 -*- #</span>
+<span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals
 
-            </div>
-            
-        </div>
+<span class="comment"># Site settings</span>
+AUTHOR = <span class="string">u'mcsrainbow'</span>
+AUTHOR_EMAIL = <span class="string">u'guosuiyu@gmail.com'</span>
+SITENAME = <span class="string">u'HeyDevOps'</span>
+TAGLINE = <span class="string">'Whatever is worth doing is worth doing well.'</span>
+SITEURL = <span class="string">'http://mcsrainbow.github.io'</span>
+DEFAULT_DATE_FORMAT = (<span class="string">'%Y-%m-%d'</span>)
+
+TIMEZONE = <span class="string">'Asia/Shanghai'</span>
+
+DEFAULT_LANG = <span class="string">u'zh'</span>
+DEFAULT_METADATA = (
+)
+
+DELETE_OUTPUT_DIRECTORY = <span class="keyword">False</span>
+
+<span class="comment"># Blogroll</span>
+LINKS = (
+  (<span class="string">'HeyLinux'</span>, <span class="string">'http://heylinux.com'</span>),
+)
+
+<span class="comment"># Social widget</span>
+SOCIAL = (
+  (<span class="string">'Github'</span>, <span class="string">'http://github.com/mcsrainbow/heydevops'</span>),
+  (<span class="string">'Twitter'</span>, <span class="string">'http://twitter.com/heydevops'</span>),
+)
+
+MENUITEMS = (
+)
+
+<span class="comment"># Disqus</span>
+DISQUS_SITENAME = <span class="string">u"mcsrainbow"</span>
+
+<span class="comment"># Content path</span>
+PATH = <span class="string">'content'</span>
+PAGE_PATHS = [<span class="string">'pages'</span>]
+ARTICLE_PATHS = [<span class="string">'articles'</span>]
+STATIC_PATHS = [<span class="string">'images'</span>, <span class="string">'files'</span>]
+EXTRA_PATH_METADATA = {
+  <span class="string">'files/robots.txt'</span>: {<span class="string">'path'</span>: <span class="string">'robots.txt'</span>},
+  <span class="string">'images/favicon.ico'</span>: {<span class="string">'path'</span>: <span class="string">'favicon.ico'</span>},
+}
+
+<span class="comment"># URL settings</span>
+PAGINATION_PATTERNS = (
+  (<span class="number">1</span>, <span class="string">'{base_name}/'</span>, <span class="string">'{base_name}/index.html'</span>),
+  (<span class="number">2</span>, <span class="string">'{base_name}/page/'</span>, <span class="string">'{base_name}/page/{number}.html'</span>),
+)
+ARTICLE_URL = (<span class="string">'articles/{slug}.html'</span>)
+ARTICLE_SAVE_AS = (<span class="string">'articles/{slug}.html'</span>)
+PAGE_LANG_SAVE_AS = <span class="keyword">False</span>
+
+<span class="comment"># Feed</span>
+FEED_DOMAIN = SITEURL
+FEED_ALL_ATOM = <span class="string">'feeds/all.atom.xml'</span>
+CATEGORY_FEED_ATOM = <span class="string">'feeds/%s.atom.xml'</span>
+TRANSLATION_FEED_ATOM = <span class="keyword">None</span>
+
+<span class="comment"># Theme</span>
+THEME = <span class="string">'pelican-themes/zurb-F5-basic'</span>
+COVER_BG_COLOR = <span class="string">'#375152'</span>
+DEFAULT_PAGINATION = <span class="number">10</span>
+
+<span class="comment"># Plugin</span>
+PLUGIN_PATHS = [<span class="string">'pelican-plugins'</span>]
+PLUGINS = [ <span class="string">'sitemap'</span>, <span class="string">'gravatar'</span> ]
+
+<span class="comment"># Sitemap</span>
+SITEMAP = {
+  <span class="string">'format'</span>: <span class="string">'xml'</span>,
+  <span class="string">'priorities'</span>: {
+<span class="string">'articles'</span>: <span class="number">1</span>,
+<span class="string">'pages'</span>: <span class="number">0.9</span>,
+<span class="string">'indexes'</span>: <span class="number">0.8</span>,
+  },
+  <span class="string">'changefreqs'</span>: {
+<span class="string">'indexes'</span>: <span class="string">'daily'</span>,
+<span class="string">'articles'</span>: <span class="string">'daily'</span>,
+<span class="string">'pages'</span>: <span class="string">'weekly'</span>
+  }
+}
+
+<span class="comment"># Can be useful in development, but set to False when you're ready to publish</span>
+RELATIVE_URLS = <span class="keyword">False</span>
+</code></pre><h3 id="配置_publishconf-py">配置 publishconf.py</h3>
+<pre><code><span class="comment">#!/usr/bin/env python</span>
+<span class="comment"># -*- coding: utf-8 -*- #</span>
+<span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals
+
+<span class="comment"># This file is only used if you use `make publish` or</span>
+<span class="comment"># explicitly specify it as your config file.</span>
+
+<span class="keyword">import</span> os
+<span class="keyword">import</span> sys
+sys.path.append(os.curdir)
+<span class="keyword">from</span> pelicanconf <span class="keyword">import</span> *
+
+SITEURL = <span class="string">'http://mcsrainbow.github.io'</span>
+RELATIVE_URLS = <span class="keyword">False</span>
+
+FEED_ALL_ATOM = <span class="string">'feeds/all.atom.xml'</span>
+CATEGORY_FEED_ATOM = <span class="string">'feeds/%s.atom.xml'</span>
+
+DELETE_OUTPUT_DIRECTORY = <span class="keyword">True</span>
+
+<span class="comment"># Following items are often useful when publishing</span>
+
+DISQUS_SITENAME = <span class="string">u"mcsrainbow"</span>
+<span class="comment">#GOOGLE_ANALYTICS = ""</span>
+</code></pre><h3 id="模版">模版</h3>
+<pre><code><span class="attribute">Title</span>: <span class="string">Hello</span>
+<span class="attribute">Date</span>: <span class="string">2/9/2015 10:14:01 AM </span>
+<span class="attribute">Category</span>: <span class="string">Uncategorized</span>
+<span class="attribute">Tags</span>: <span class="string">Pelican, Markdown</span>
+<span class="attribute">Slug</span>: <span class="string">hello</span>
+<span class="attribute">Author</span>: <span class="string">Bill Zhou</span>
+<span class="attribute">Summary</span>: <span class="string">Hello Pelican, Markdown and GitHub Pages.</span>
+
+<span class="erlang"><span class="variable">Hello</span> <span class="variable">Pelican</span>, <span class="variable">Markdown</span> <span class="keyword">and</span> <span class="variable">GitHub</span> <span class="variable">Pages</span>.</span>
+</code></pre>
     </div>
-    <div class="split-line"></div>
-</article>
-
     
-        <article>
-    <div class="row">
-        <div class="col-2 date-tags">
-            <div class="date-row">
-                <time datetime="2015-02-10T02:17:35.000Z">2月 10 2015</time>
-            </div>
+    <footer >
+        
             
-                <div class="tags-row">
-                
-                    <a href="/tags/pelican/" class="btn btn-info">pelican</a>
-                
-                </div>
-            
-        </div>
-        <div class="col-10">
-            <div class="article-title simple-article-title">
-                
     
-        <h1><a href="/2015/02/10/start-bolg/">start bolg with pelican</a></h1>
-    
-
-            </div>
-            
-        </div>
+    <div class="categories">
+        所属目录：
+    <a href="/categories/tech/">tech</a>
     </div>
-    <div class="split-line"></div>
-</article>
 
+            
     
-</div>
-<div>
-    <a class="btn btn-funky btn-xlarge btn-block btn-loadmore" href="javascript:void(0)">点击加载更多</a>
-</div>
+    <div class="tags-row">
+        标签：<a class="btn btn-info" href="/tags/pelican/">pelican</a>
+    </div>
 
-<script>
-    (function($) {
-        //当内容区内容不够长时，设置内容区域的高度使footer沉底
-        var resizeContentWrapper = function() {
-            var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
-                headerHeight = Math.floor($('#page-header').height()),
-                footerHeight = Math.floor($('#page-footer').height()),
-                minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
-            if(contentHeight < minHeight) {
-                $('#content-wrapper').height(minHeight);
-            } else {
-                $('#content-wrapper').css({height: 'auto'});
-            }
-        };
-
-        //按一定数目显示博文条目
-        var pagination = function() {
-            var PER_PAGE_NUM = showNum = 6,
-                i,
-                initHeight = 0,
-                outerHeightList = [],
-                articleList = $('#content-wrapper article'),
-                articleNum = articleList.length;
-
-            for(i = 0; i < articleList.length; i++) {
-                outerHeightList.push($(articleList[i]).outerHeight());
-                if(i >= PER_PAGE_NUM) {
-                    $(articleList[i]).hide();
-                }
-            }
-
-            $('.btn-loadmore').click(function() {
-                var deltaH = 0,
-                    toShowList = [],
-                    duration = 1000;
-                for(i = showNum, showNum += PER_PAGE_NUM; i < showNum; i++) {
-                    if(i >= articleList.length) {
-                        $('.btn-loadmore').html("已经到底啦");
-                        break;
-                    }
-                    toShowList.push($(articleList[i]));
-                    deltaH += outerHeightList[i];
-                }
-                
-                //执行文章列表高度加大动画
-                $('#article-list').animate({
-                    height: "+=" + deltaH,
-                    scrollTop: "+=" + deltaH
-                }, duration, function() {
-                    //执行完毕后，每篇文章淡入动画
-                    for(i = 0; i < toShowList.length; i++) {
-                        toShowList[i].css({opacity: 0});
-                        toShowList[i].show();
-                        toShowList[i].animate({
-                            opacity: 1
-                        }, duration);
-                    }
-                    
-                });
-                //滚动条滚动动画
-                $('body, html').animate({
-                    scrollTop: "+=" + deltaH / 2
-                }, duration);
-            });
-            resizeContentWrapper();
-        };
-
-        $(document).ready(pagination);
-    })(jQuery);
-</script>
-
-<!-- 新功能导航 -->
-<div class="feature-guide-container">
-    <div class="shadow-container"></div>
-    <div class="feature-box">
-        <p class="feature-description"></p>
-        <a class="btn btn-i-know pull-right" href="javascript:void(0);">我知道了</a>
+        
         <div class="clearfix"></div>
+    </footer>
+</article>
+
+
+
+<section id="comment">
+    <h1 class="page-sub-title">Comments</h1>
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread" data-title="start bolg with pelican">
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"itboy"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = 'http://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- Duoshuo Comment END -->
     </div>
-</div>
-<script>
-    (function($){
-        //检测是否有新的功能，并提示用户
-        var checkNewFeature = function() {
-            //设置本地存储
-            var setStorage = 
-            (typeof window.localStorage !== 'undefined') && (typeof window.localStorage !== 'unknown') ?
-                //若支持HTML5的localStorage则使用localStorage
-                function(key, value) {
-                    window.localStorage[key] = value;
-                } : 
-                //否则使用cookie存储
-                function(key, value){
-                    var exdate = new Date(),
-                        expireDays = 15;    //cookie过期时间15天
-                    exdate.setDate(exdate.getDate() + expireDays);
-                    document.cookie = key + '=' + escape(value) + ';expires=' + exdate.toGMTString();
-                };
-            //获取本地存储
-            var getStorage = 
-            (typeof window.localStorage !== 'undefined') && (typeof window.localStorage !== 'unknown') ?
-                function(key) {
-                    return window.localStorage[key] || null;
-                } :
-                function(key) {
-                    if (document.cookie.length > 0) {
-                        var start = document.cookie.indexOf(key + '='),
-                            end;
-                        if (start !== -1) {
-                            start = start + key.length + 1;
-                            end = document.cookie.indexOf(';', start);
-                            if (end === -1) {
-                                end = document.cookie.length;
-                            }
-                            return unescape(document.cookie.substring(start, end));
-                        } else {
-                            return null;
-                        }
-                    }
-                    return null;
-                };
+</section>
 
-            
-        };
-
-        $(document).ready(checkNewFeature);
-    })(jQuery);
-</script>
 
         </div>
     </div>
