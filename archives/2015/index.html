@@ -1,605 +1,430 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>Archives: 2015 | IT Boy</title>
-  <meta name="author" content="Bill Zhou">
-  
-  <meta name="description" content="IT,information technology,boys,java,php,c#,python,js">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>Archives: 2015 | IT Boy</title>
+    <meta name="author" content="Bill Zhou">
+    
+    <meta name="description" content="IT,information technology,boys,java,php,c#,python,js">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  
-  <meta property="og:site_name" content="IT Boy"/>
+    
+    <meta property="og:site_name" content="IT Boy"/>
 
-  
-    <meta property="og:image" content="undefined"/>
-  
+    <link rel="alternate" href="/atom.xml" title="IT Boy" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/css/lib/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/css/lib/furatto.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="IT Boy" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="/js/jquery.min.js"></script>
-  
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+        <link rel="stylesheet" href="/css/lib/prettify_raytaylorism.css" type="text/css">
+        
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/jquery.jpanelmenu.js"></script>
+</head>
 
-  ga('create', 'UA-45019001-1', 'topdna.org');
-  ga('send', 'pageview');
+
+<body class="container-fluid">
+    <header id="page-header">
+        <div class="navbar inverse-navbar">
+    <div class="navbar-inner">
+        <div class="container-center">
+            <a href="/index.html" class="menu-trigger" data-meteocon="M">
+                <i class="icon-reorder"></i>
+            </a>
+            <div class="nav-collapse navbar-responsive-collapse collapse">
+                <nav id="menu">
+                    <ul class="nav">
+                        <li><a class="brand" id="blog-title" href="/index.html">IT Boy</a></li>
+                    </ul>
+                    <div class="pull-right nav" id="nav-button-group">
+                        
+                            <a href="/" class="menu-home btn btn-primary btn-large">
+                                <i class="icon-home icon-white"></i>
+                                首页
+                            </a>
+                        
+                            <a href="/archives" class="menu-archive btn btn-primary btn-large">
+                                <i class="icon-archive icon-white"></i>
+                                归档
+                            </a>
+                        
+                            <a href="javascript:void(0);" class="menu-category btn btn-primary btn-large">
+                                <i class="icon-archive icon-white"></i>
+                                分类
+                            </a>
+                        
+                            <a href="/reading" class="menu-reading btn btn-primary btn-large">
+                                <i class="icon-book icon-white"></i>
+                                读书
+                            </a>
+                        
+                            <a href="/about" class="menu-about btn btn-primary btn-large">
+                                <i class="icon-user icon-white"></i>
+                                关于
+                            </a>
+                        
+                    </div>
+                </nav>
+                <nav id="jPanelMenu-menu-side">
+    <ul class="nav main-menu">
+        <li><a class="brand" href="index.html">IT Boy</a></li>
+        
+            <li>
+                <a href="/" class="menu-home">
+                    <i class="icon-home icon-white"></i>
+                    首页
+                </a>
+            </li>
+        
+            <li>
+                <a href="/archives" class="menu-archive">
+                    <i class="icon-archive icon-white"></i>
+                    归档
+                </a>
+            </li>
+        
+            <li>
+                <a href="javascript:void(0);" class="menu-category">
+                    <i class="icon-archive icon-white"></i>
+                    分类
+                </a>
+            </li>
+        
+            <li>
+                <a href="/reading" class="menu-reading">
+                    <i class="icon-book icon-white"></i>
+                    读书
+                </a>
+            </li>
+        
+            <li>
+                <a href="/about" class="menu-about">
+                    <i class="icon-user icon-white"></i>
+                    关于
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="nav category-menu hide">
+        <li>
+            <span><a class="brand" href="javascript:void(0);">分类目录</a></span>
+            <span><a class="btn-back brand pull-right" href="javascript:void(0);">
+                <i class="icon-arrow-left"></i>
+            </a></span>
+        </li>
+
+        
+
+        
+
+            
+
+            <li collapse-level="0">
+                <a href="/categories/essay/" class="collapse-level-0">
+                    <i class="icon-caret-right"></i>
+                    essay(1)
+                </a>
+            </li>
+
+            
+
+            
+
+        
+
+            <li collapse-level="0">
+                <a href="/categories/tech/" class="collapse-level-0">
+                    <i class="icon-caret-right"></i>
+                    tech(1)
+                </a>
+            </li>
+
+            
+
+            
+
+        
+
+        
+    </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </header>
+    <div id="content-wrapper">
+        <div class="container-center">
+        
+
+<h2 class="page-sub-title archive-title">你当前所在的位置：2015</h2>
+
+
+    
+        <article>
+    <div class="row">
+        <div class="col-2 date-tags">
+            <div class="date-row">
+                <time datetime="2015-02-14T11:38:09.840Z">2月 14 2015</time>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <div class="article-title simple-article-title">
+                
+    
+        <h1><a href="/2015/02/14/somebody-s-yueli/"></a></h1>
+    
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="split-line"></div>
+</article>
+
+    
+        <article>
+    <div class="row">
+        <div class="col-2 date-tags">
+            <div class="date-row">
+                <time datetime="2015-02-14T11:38:09.838Z">2月 14 2015</time>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <div class="article-title simple-article-title">
+                
+    
+        <h1><a href="/2015/02/14/my-favourite-hexo-themes/"></a></h1>
+    
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="split-line"></div>
+</article>
+
+    
+        <article>
+    <div class="row">
+        <div class="col-2 date-tags">
+            <div class="date-row">
+                <time datetime="2015-02-14T11:38:09.836Z">2月 14 2015</time>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <div class="article-title simple-article-title">
+                
+    
+        <h1><a href="/2015/02/14/hello-world/">Hello World</a></h1>
+    
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="split-line"></div>
+</article>
+
+    
+        <article>
+    <div class="row">
+        <div class="col-2 date-tags">
+            <div class="date-row">
+                <time datetime="2015-02-14T11:38:09.833Z">2月 14 2015</time>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <div class="article-title simple-article-title">
+                
+    
+        <h1><a href="/2015/02/14/google-10/"></a></h1>
+    
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="split-line"></div>
+</article>
+
+    
+        <article>
+    <div class="row">
+        <div class="col-2 date-tags">
+            <div class="date-row">
+                <time datetime="2015-02-10T02:17:35.000Z">2月 10 2015</time>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <div class="article-title simple-article-title">
+                
+    
+        <h1><a href="/2015/02/10/start-bolg/">start bolg with pelican</a></h1>
+    
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="split-line"></div>
+</article>
+
+    
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+
+        </div>
+    </div>
+    <footer id="page-footer"><div class="footer-content">
+    <div class="container-center">
+        <div class="footer-text pull-left">
+            <div class="copyright">
+                
+                Copyright &copy; 2015 <a href="/">Bill Zhou</a>
+                
+            </div>
+            <div class="theme-copyright">
+                <span>Blog powered by <a href="http://zespia.tw/hexo/zh-CN/">hexo</a></span>
+                Theme <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a> desgined by <strong>Nix</strong>
+            </div>
+        </div>
+        <div class="social-group pull-right">
+            
+            <a href="https://github.com/raytaylorlin" target="_blank" title="github"><i class="icon-github"></i></a>
+            
+            
+            <a href="http://weibo.com/1956184117" target="_blank" title="新浪微博"><i class="icon-weibo"></i></a>
+            
+            
+            <a href="http://www.renren.com/309069699" target="_blank" title="人人网"><i class="icon-renren"></i></a>
+            
+            
+            <a href="https://plus.google.com/113216251417550089742?rel=author" target="_blank" title="Google+"><i class="icon-google-plus-sign"></i></a>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43460643-1', 'raytaylorlin.com');
+    ga('send', 'pageview');
 
 </script>
 
 
-</head>
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-<body>
-  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">IT Boy</a></h1>
-  <h2><a href="/">IT男的那些事</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">首页</a></li>
-    
-      <li><a href="http://traceinvest.com">TraceInvest</a></li>
-    
-      <li><a href="/categories/essay/">随感</a></li>
-    
-      <li><a href="/categories/tech/">技术</a></li>
-    
-      <li><a href="/categories/investment/">理财</a></li>
-    
-      <li><a href="/categories/life/">生活</a></li>
-    
-      <li><a href="/archives">归档</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2015</h2>
+<script>
+    (function($) {
+        //当内容区内容不够长时，设置内容区域的高度使footer沉底
+        var resizeContentWrapper = function() {
+            //HACK: 用延时的方法使计算高度时候更加准确，会有一闪的情况
+            setTimeout(function() {
+                var contentHeight = Math.floor($('#content-wrapper .container-center').height()),
+                headerHeight = Math.floor($('#page-header').height()),
+                footerHeight = Math.floor($('#page-footer').height()),
+                minHeight = Math.floor($(window).height() - headerHeight - footerHeight);
+                if(contentHeight < minHeight) {
+                    $('#content-wrapper').css({height: minHeight});                    
+                } else {
+                    $('#content-wrapper').css({height: 'auto'});
+                }
+            },500);
+        };
 
+        //响应式侧边栏
+        var initJPanelMenu = function() {
+            var jPM = $.jPanelMenu({
+                menu: '#jPanelMenu-menu-side',
+                duration: 500
+            });
+            jPM.on();
+        };
 
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-02-14T11:38:09.840Z"><a href="/2015/02/14/somebody-s-yueli/">2月 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/02/14/somebody-s-yueli/"></a></h1>
-  
+        //初始化目录按钮事件绑定
+        var initCategory = function() {
+            function showMainMenu() {
+                var $jPanelMenu = $('#jPanelMenu-menu');
+                $jPanelMenu.find('ul.category-menu').hide();
+                $jPanelMenu.find('ul.main-menu').fadeIn();
+            }
 
-    </header>
-    <div class="entry">
-      
-        <p>layout: photo.md<br>title: somebodysYueli<br>date: 2015-02-10 10:24:02<br>categories: tech<br>tags: photo<br>photos: </p>
-<ul>
-<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg</a></li>
-<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</a></li>
-</ul>
+            function showCategoryMenu() {
+                var $jPanelMenu = $('#jPanelMenu-menu');
+                $jPanelMenu.find('ul.main-menu').hide();
+                $jPanelMenu.find('ul.category-menu').fadeIn();
+            }
 
-      
-    </div>
-    <footer>
-      
+            $('.menu-category').click(function() {
+                var jPM = $.jPanelMenu({
+                    duration: 500,
+                    beforeOpen: function() {
+                        showCategoryMenu();
+                    },
+                    afterClose: function() {
+                        showMainMenu();
+                    }
+                });
+                if(jPM.isOpen()) {
+                    showCategoryMenu();
+                } else {
+                    jPM.open();
+                }
+            });
+
+            $('.category-menu').on('click', '.btn-back', function() {
+                showMainMenu();
+            });
+        };
+
+        $(document).ready(resizeContentWrapper);
+        $(document).ready(initJPanelMenu);
+        $(document).ready(initCategory);
         
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-02-14T11:38:09.838Z"><a href="/2015/02/14/my-favourite-hexo-themes/">2月 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/02/14/my-favourite-hexo-themes/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>layout: post.md<br>title: my favourite hexo themes<br>date: 2015-02-10 14:54:13<br>categories: tech<br>tags:hexo</p>
-<hr>
-<h4 id="一些hexo主题">一些hexo主题</h4>
-<ul>
-<li><p>git clone git@github.com:hustcer/hexo-theme-air.git themes/air</p>
-</li>
-<li><p>git clone git://github.com/heroicyang/hexo-theme-modernist.git themes/modernist</p>
-</li>
-<li><p>git clone git://github.com/acgtyrant/hexo-theme-tyrant.git themes/tyrant</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-02-14T11:38:09.836Z"><a href="/2015/02/14/hello-world/">2月 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/02/14/hello-world/">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-02-14T11:38:09.833Z"><a href="/2015/02/14/google-10/">2月 14 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/02/14/google-10/"></a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>title: Matt Cutts：我早年在Google学到的10条经验<br>date: 2015-02-10 16:21:44<br>categories:tech<br>tags:</p>
-<hr>
-<h4 id="Matt_Cutts：我早年在Google学到的10条经验">Matt Cutts：我早年在Google学到的10条经验</h4>
-<p>本文来自Google公司资深工程师Matt Cutts。加入Google以前，在北卡罗来纳州大学教堂山分校攻读计算机图形学方向博士学位。他写的文章深入浅出，简明易懂，实用价值很高，因此他在互联网上具有相当高的名气。 日前，High Scalability创始人Todd Hoff整理了其与Cutts的谈话，总结了后者早年在Google学到的10条经验，值得很多人学习。以下为原文： </p>
-<p>我所认识的Matt Cutts是这样的，他是Google的老员工（2000年入职），目前担任Google公司Webspam团队的负责人，他与This Week in Tech（TWiT）创始人Leo Laporte曾在TWiT一起亮相，从中我们可以看到他一贯的敏锐、体贴，是个真正的好男人。走过路过，不要错过！ </p>
-<p>出乎意料的是他所做的谈话，早年在Google学到的经验。此番谈话也使Matt看起来异常风趣，像是个讲故事的好手。谈话是讲述的是他早期在Google一些故事。故事呈现了一个非常人性化的Google。当你认为在Google所做的一切都是人工智能搞定的一种计算之时，Matt提醒大家，那些都是人工所做的判断，通常只是这些人尽力而为的结果。 </p>
-<p>谈话的核心内容是借助创造力来进行创新，来解决问题。当你陷入进退维谷的境地时，就要变得富有创造力。质疑自己的设想，下面的谈话也许能帮到你。 </p>
-<p>谈话虽短，但值得一看。很多有趣的小细节，只有身经百战、远见卓识者才能拥有。谈话中亦充满了智慧。这就是我对Matt谈话的评注！ </p>
-<ol>
-<li>创造力导致天壤之别 </li>
-</ol>
-<p>Matt Cutts在Google头一个大型项目是开发色 情网站过滤器。孤军奋战了一段时间后，他发现没人能帮到他。于是他的妻子烘焙了一些饼干。任何在服务器上找到色 情信息的人，都会得到他发给的饼干。这样的战术相当奏效，以至于这些饼干被周围的人称为色 情饼干，其他团队也采用了这个策略。抛出一个难题的同时给予人们小小的、象征性的奖励，这样做能够创造奇迹。 </p>
-<ol>
-<li>当面对相互矛盾的制约时，一个优秀的管理者常常能够找到冲突双方都满意的创造性解决方案。 </li>
-</ol>
-<p>撒旦是与上帝为敌的魔王！Google首次面对的重大争议本来要找比撒旦更邪恶人，而找到的答案却是微软？当然不是啦！面临的正争议是基于《美国数字千年法案》（The Digital Millennium Copyright Act, DMCA)的删除请求。去年Google收到大约3.5亿条DMCA删除请求。显然，你无法手动去搞定这一切，而同时也很难知道一个请求是合理的还是不合理的。对带有【REEFER MADNESS】(赤裸之城)这样信息的内容来说，删除请求似乎是合法的，但由于它不受版权限制，因此这样的请求是不合理的。 </p>
-<p>Google收到最初的删除请求是来自山达基教会的，目的是为了压制对其进行的批评。他们试图压制的网站在挪威，而网站的所有者不愿意处理反向通知（counter notification），因为他们不想承担在美国的诉讼风险。Google应该怎么办呢？ </p>
-<p>差则思勤，Google是这样解决的： </p>
-<p>删除了页面并添加了说明：“由于DMCA删除请求的原因，搜索结果予以删除”。<br>投诉了chillingeffects.org，这是一项由北美多间大学联合进行的学术研究项目。本项目最关注的是言论自由和知识产权问题。</p>
-<p>Google开始对每一项而不得不删除的合法请求开始做同样的事情。 </p>
-<ol>
-<li>要积极主动。没人关心你的职业生涯，相对你所做的事，也没人关心你赚多少钱。要自己想要的。否则你就完全偏离方向。 </li>
-</ol>
-<p>Matt是“自告奋勇”去做广告产品前端工作的，他为此大约工作了一年时间。在这期间，Matt看到了人们开始向Google发送垃圾邮件，于是他跑到主管工程的副总裁那里说“我想去做反垃圾处理这块内容”，这位副总裁答应他了。就这样一路走来。而在这之前Matt很大程度上依赖于别人指使他应该做什么。 </p>
-<p>你会惊讶，仅仅告诉别人“我想做某事”，竟然会产生这么大区别。假如你是经理就请记住，如果有人想要做一些事情，那么他们就会加倍地去努力。 </p>
-<ol>
-<li>明确你的设想，进行反思 </li>
-</ol>
-<p>如果你完全用传统思维想问题，那很难使你从人群中脱颖而出。很难有冲劲儿，也很难变得与众不同。这些地方往往是最让人拿不准的，也是最好的机会。你相信别人不相信的事情吗？ </p>
-<ol>
-<li>质疑设想的训练 </li>
-</ol>
-<p>我们通常不善于质疑自己的设想。近似的一种方法就是拿当前的一些事情问自己：发生了什么变化？与过去相比，世界有哪些不同？ </p>
-<p>例如，对于美国平价医疗法案来说，有两点显著区别： </p>
-<p>引用<br>1）可以使用对已存在疾病的保险获得医疗服务；<br>2）你不必非要从雇主那里上保险，而可以自行去交易所购买。</p>
-<p>影响： </p>
-<p>引用<br>1）自己经商的人数可能会增加；<br>2）像Uber那样依靠独立承包商运转的公司，可能会支持这项法案。</p>
-<p>像医疗保险那样的东西可能会发生非常大的涟漪效应（ripple effect）。 </p>
-<p>拿Google来说，以前Google的搜索引擎依靠规模庞大的真实物理机，都是一些价格昂贵的机器。Google对廉价的商品硬件（commodity hardware）做了横向扩展（scale out）。这就意味着Google可能付出更低廉的代价而获得成长。这也意味着机器越多出现的错误就越多。因此你需要知道如何让整体比局部更可靠，这可不是一件容易事。 </p>
-<p>这也不仅仅是购买廉价的硬件就能解决的问题。在一些转折点你可以有很多认识和领悟。例如，机械硬盘的寻道时间是10毫秒。如果你在RAM中做同样的事情，每秒钟可以做很多次寻道。把网站全部索引都放到RAM里代价高昂，但你可以获得更高的吞吐量。因此权衡来讲这样做还是值得的。 </p>
-<ol>
-<li>商品硬件是Google取得成功的原因吗？ </li>
-</ol>
-<p>不！成功是数以百计创新的结果。这样的成功不是灵感乍现而后万事大吉。因此成功不仅源于廉价的硬件，也不仅源于网页排名。成功源于Map Reduce模型，Spanner数据库等创新性的技术。成就一个成功的公司需要许多创新，成就一番个人事业，也需要很多创新。 </p>
-<ol>
-<li>设想受到质疑，环境发生变化，你必须适应。使用数据你可以做很多非常酷的东西。 </li>
-</ol>
-<p>在很长一段时间里，我被人工智能难住了。1999年的时候，人工智能还很笨，不能做任何事情。如今状况已经大为改观。很大程度上是因为世界上有了更多的数据。 </p>
-<p>“Google Brain”是Google运用深度神经网络算法所建立的系统，用来观看YouTube，看看能学习什么。“Google Brain”具有自身可以识别猫咪的神经网络。这项技术同样被用于地构建更出色的词语识别系统。因此，每部Android手机都具有更佳的语音识别能力，这要归功于深度学习算法。这项技术使错误率下降30%，具有紧凑的模型，可以应用在电话上。 </p>
-<p>如今，技术已经先进到可以指出所识别的景致身处何方。像瀑布、建筑、美国加利福尼亚州中部的约塞米蒂国家公园、棕榈树、大海和雪景。计算机现在甚至还能给图片加标题。 </p>
-<ol>
-<li>事情会向不好的方向发展，你必须对此有所准备 </li>
-</ol>
-<p>在Google也并不全是成功和甜点这样美好的事情。Matt记得所有的诉讼和证词，这对一位工程师来说挺没意思的。这样的情况源于其他公司的诉讼，而这些诉讼来自于各个国家。 </p>
-<p>会有苦日子，少不了困难，所以自己要做好准备。 </p>
-<ol>
-<li>不管将要身处何境，都要与快乐相伴，按动快门，使瞬间永恒。 </li>
-</ol>
-<p>如果你乐意的话，你可以记录每一个会议。这没有多少成本。十年后，你要记住八个伙伴围坐的乒乓球桌，一起谈论如何让Google的搜索质量更好。你要记住那条大狗，要记住过去的美好时光。 </p>
-<p>碰到有趣或是离奇的事情，拍些照片。比如有人曾经为了再次被搜索收录而寄送过来的一块儿巨大的饼干，其他的例子还有四月的愚人节恶作剧以及万圣节的传统。 </p>
-<p>Matt曾经与他的团队成员打赌，他们可以对自己的头发任意处置。团队成员出色地拦截了四分之一的垃圾邮件，将Matt的头发全剪掉了。 </p>
-<p>每周例会上的趣事是员工可以盘问公司高层，他们为什么做出这样那个的决定。 </p>
-<ol>
-<li>不管你正在做什么，尽量确保这件事有价值，确保是你所在乎的事情，是人们想要的东西。 </li>
-</ol>
-<p>Matt一直认为Google是一个工具，而Google的员工一直尽其所能使Google成为最棒的工具。 </p>
-<p>Fred Brooks在他论文The computer scientist as toolsmith（计算机科学家的使命是制造工具）中写到： </p>
-<p>如果我们正确地认识自己的角色，那么我们就可以更清晰地认识到成功的标准：工具制造者的成功在于，也只在于，工具的使用者在他的帮助下成功。 </p>
-<p>原文链接：Matt Cutts: 10 Lessons Learned From The Early Days Of Google</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post.md">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-02-10T02:17:35.000Z"><a href="/2015/02/10/start-bolg/">2月 10 2015</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/02/10/start-bolg/">start bolg with pelican</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h4 id="下载风格包pelican-themes与插件包pelican-plugins">下载风格包pelican-themes与插件包pelican-plugins</h4>
-<p>git clone git://github.com/getpelican/pelican-themes.git</p>
-<p>git clone git://github.com/getpelican/pelican-plugins.git</p>
-<h3 id="pelicanconf-py配置">pelicanconf.py配置</h3>
-<pre><code><span class="comment">#!/usr/bin/env python</span>
-<span class="comment"># -*- coding: utf-8 -*- #</span>
-<span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals
-
-<span class="comment"># Site settings</span>
-AUTHOR = <span class="string">u'mcsrainbow'</span>
-AUTHOR_EMAIL = <span class="string">u'guosuiyu@gmail.com'</span>
-SITENAME = <span class="string">u'HeyDevOps'</span>
-TAGLINE = <span class="string">'Whatever is worth doing is worth doing well.'</span>
-SITEURL = <span class="string">'http://mcsrainbow.github.io'</span>
-DEFAULT_DATE_FORMAT = (<span class="string">'%Y-%m-%d'</span>)
-
-TIMEZONE = <span class="string">'Asia/Shanghai'</span>
-
-DEFAULT_LANG = <span class="string">u'zh'</span>
-DEFAULT_METADATA = (
-)
-
-DELETE_OUTPUT_DIRECTORY = <span class="keyword">False</span>
-
-<span class="comment"># Blogroll</span>
-LINKS = (
-  (<span class="string">'HeyLinux'</span>, <span class="string">'http://heylinux.com'</span>),
-)
-
-<span class="comment"># Social widget</span>
-SOCIAL = (
-  (<span class="string">'Github'</span>, <span class="string">'http://github.com/mcsrainbow/heydevops'</span>),
-  (<span class="string">'Twitter'</span>, <span class="string">'http://twitter.com/heydevops'</span>),
-)
-
-MENUITEMS = (
-)
-
-<span class="comment"># Disqus</span>
-DISQUS_SITENAME = <span class="string">u"mcsrainbow"</span>
-
-<span class="comment"># Content path</span>
-PATH = <span class="string">'content'</span>
-PAGE_PATHS = [<span class="string">'pages'</span>]
-ARTICLE_PATHS = [<span class="string">'articles'</span>]
-STATIC_PATHS = [<span class="string">'images'</span>, <span class="string">'files'</span>]
-EXTRA_PATH_METADATA = {
-  <span class="string">'files/robots.txt'</span>: {<span class="string">'path'</span>: <span class="string">'robots.txt'</span>},
-  <span class="string">'images/favicon.ico'</span>: {<span class="string">'path'</span>: <span class="string">'favicon.ico'</span>},
-}
-
-<span class="comment"># URL settings</span>
-PAGINATION_PATTERNS = (
-  (<span class="number">1</span>, <span class="string">'{base_name}/'</span>, <span class="string">'{base_name}/index.html'</span>),
-  (<span class="number">2</span>, <span class="string">'{base_name}/page/'</span>, <span class="string">'{base_name}/page/{number}.html'</span>),
-)
-ARTICLE_URL = (<span class="string">'articles/{slug}.html'</span>)
-ARTICLE_SAVE_AS = (<span class="string">'articles/{slug}.html'</span>)
-PAGE_LANG_SAVE_AS = <span class="keyword">False</span>
-
-<span class="comment"># Feed</span>
-FEED_DOMAIN = SITEURL
-FEED_ALL_ATOM = <span class="string">'feeds/all.atom.xml'</span>
-CATEGORY_FEED_ATOM = <span class="string">'feeds/%s.atom.xml'</span>
-TRANSLATION_FEED_ATOM = <span class="keyword">None</span>
-
-<span class="comment"># Theme</span>
-THEME = <span class="string">'pelican-themes/zurb-F5-basic'</span>
-COVER_BG_COLOR = <span class="string">'#375152'</span>
-DEFAULT_PAGINATION = <span class="number">10</span>
-
-<span class="comment"># Plugin</span>
-PLUGIN_PATHS = [<span class="string">'pelican-plugins'</span>]
-PLUGINS = [ <span class="string">'sitemap'</span>, <span class="string">'gravatar'</span> ]
-
-<span class="comment"># Sitemap</span>
-SITEMAP = {
-  <span class="string">'format'</span>: <span class="string">'xml'</span>,
-  <span class="string">'priorities'</span>: {
-<span class="string">'articles'</span>: <span class="number">1</span>,
-<span class="string">'pages'</span>: <span class="number">0.9</span>,
-<span class="string">'indexes'</span>: <span class="number">0.8</span>,
-  },
-  <span class="string">'changefreqs'</span>: {
-<span class="string">'indexes'</span>: <span class="string">'daily'</span>,
-<span class="string">'articles'</span>: <span class="string">'daily'</span>,
-<span class="string">'pages'</span>: <span class="string">'weekly'</span>
-  }
-}
-
-<span class="comment"># Can be useful in development, but set to False when you're ready to publish</span>
-RELATIVE_URLS = <span class="keyword">False</span>
-</code></pre><h3 id="配置_publishconf-py">配置 publishconf.py</h3>
-<pre><code><span class="comment">#!/usr/bin/env python</span>
-<span class="comment"># -*- coding: utf-8 -*- #</span>
-<span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals
-
-<span class="comment"># This file is only used if you use `make publish` or</span>
-<span class="comment"># explicitly specify it as your config file.</span>
-
-<span class="keyword">import</span> os
-<span class="keyword">import</span> sys
-sys.path.append(os.curdir)
-<span class="keyword">from</span> pelicanconf <span class="keyword">import</span> *
-
-SITEURL = <span class="string">'http://mcsrainbow.github.io'</span>
-RELATIVE_URLS = <span class="keyword">False</span>
-
-FEED_ALL_ATOM = <span class="string">'feeds/all.atom.xml'</span>
-CATEGORY_FEED_ATOM = <span class="string">'feeds/%s.atom.xml'</span>
-
-DELETE_OUTPUT_DIRECTORY = <span class="keyword">True</span>
-
-<span class="comment"># Following items are often useful when publishing</span>
-
-DISQUS_SITENAME = <span class="string">u"mcsrainbow"</span>
-<span class="comment">#GOOGLE_ANALYTICS = ""</span>
-</code></pre><h3 id="模版">模版</h3>
-<pre><code><span class="attribute">Title</span>: <span class="string">Hello</span>
-<span class="attribute">Date</span>: <span class="string">2/9/2015 10:14:01 AM </span>
-<span class="attribute">Category</span>: <span class="string">Uncategorized</span>
-<span class="attribute">Tags</span>: <span class="string">Pelican, Markdown</span>
-<span class="attribute">Slug</span>: <span class="string">hello</span>
-<span class="attribute">Author</span>: <span class="string">Bill Zhou</span>
-<span class="attribute">Summary</span>: <span class="string">Hello Pelican, Markdown and GitHub Pages.</span>
-
-<span class="erlang"><span class="variable">Hello</span> <span class="variable">Pelican</span>, <span class="variable">Markdown</span> <span class="keyword">and</span> <span class="variable">GitHub</span> <span class="variable">Pages</span>.</span>
-</code></pre>
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-
-  <ul class="page-direction" id="page-direction">
-    <li><a class="page-prev icon-chevron-sign-left" href="javascript:;" title="Prev"></a></li>
-    <li><a class="page-next icon-chevron-sign-right" href="javascript:;" title="Next"></a></li>
-</ul>
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="text" name="q" results="0" placeholder="Search">
-    <i class="icon-search"></i>
-    <input type="hidden" name="q" value="site:www.itboy.org">
-  </form>
-</div>
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/pelican/">pelican</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-
-  <div class="trace-invest">
-    <span>
-        <a href="http://zhousenbiao.com" target="_blank">欢迎光临我的相关网站 :</br>zhousenbiao.com</a>
-    </span>
-</div>
-
-
-  
-<div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2015/02/14/somebody-s-yueli/"></a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/14/my-favourite-hexo-themes/"></a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/14/hello-world/">Hello World</a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/14/google-10/"></a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/10/start-bolg/">start bolg with pelican</a>
-      </li>
-    
-  </ul>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2015 Bill Zhou
-  
-</div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
-
+        $(window).resize(resizeContentWrapper);
+    })(jQuery);
+</script>
 </body>
-
 </html>
