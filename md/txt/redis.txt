@@ -10,3 +10,10 @@ http://itindex.net/detail/50647-redis-java-%E5%AE%A2%E6%88%B7%E7%AB%AF
 
 
 http://my.oschina.net/u/858241/blog/295096
+
+
+ <dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>2.6.1</version>
+</dependency>
