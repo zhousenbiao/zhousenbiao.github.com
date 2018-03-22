@@ -1,0 +1,16 @@
+baseurl = "http://senbiao.org/"
+languageCode = "en-us"
+title = "周森标博客"
+theme= "geppaku"
+#disqusShortname = "senbiao" # Optional
+
+[author]
+    # If you want to display author information set these
+    # This is Optional values
+    name = "本博客专注AI、机器学习、深度学习、算法及数据科学，欢迎围观。"
+
+    # Please set account ids
+    # This is Optional values
+   #linkedin = "your linkedin id"
+   #github   = "zhousenbiao"
+
