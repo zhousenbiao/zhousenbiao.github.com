@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>http://senbiao.org/post/math-ml/</loc>
+    <lastmod>2018-03-19T15:17:26+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://senbiao.org/post/k-nearest-neighbors/</loc>
     <lastmod>2018-03-19T14:38:50+08:00</lastmod>
   </url>
@@ -20,6 +25,11 @@
   <url>
     <loc>http://senbiao.org/post/tensorflow-cnn-pool-convolutional/</loc>
     <lastmod>2018-01-16T21:43:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/post/tensorflow-cnn-mnist/</loc>
+    <lastmod>2017-12-08T13:04:48+08:00</lastmod>
   </url>
   
 </urlset>

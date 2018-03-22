@@ -15,7 +15,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>K-近邻算法学习笔记 | 周森标博客</title>
+    <title>利用Tensorflow构建CNN，步骤梳理 | 周森标博客</title>
   </head>
   <body>
     <div id="wrap">
@@ -31,15 +31,19 @@
 <div class="article">
   <header>
     <div class="article-header">
-      <h1>K-近邻算法学习笔记</h1>
+      <h1>利用Tensorflow构建CNN，步骤梳理</h1>
       <div class="article-meta">
-        <span class="posttime">2018/03/19</span>
+        <span class="posttime">2017/12/08</span>
         
 <div class="tags">
   <ul>
     
     <li>
-        <a href="/tags/knn">KNN</a>
+        <a href="/tags/tensorflow">Tensorflow</a>
+    </li>
+    
+    <li>
+        <a href="/tags/cnn">CNN</a>
     </li>
     
   </ul>
@@ -50,26 +54,105 @@
     </div>
   </header>
   <div class="content">
-    <p>k-近邻算法，目的就是找到新数据的前k个邻居，然后根据邻居的分类来确定该数据的分类。
-所谓邻居，就是距离近的。因此需要一个“距离度量”，以2个特征的样本为例，也就是在2维实数向量空间，可以使用两点距离公式计算距离：</p>
+    <p>利用Tensorflow构建CNN卷积神经网络，以mnist手写识别为例，步骤梳理如下：</p>
 
-<p>$$
-\sqrt{(x1-x2)^2+(y1-y2)^2}
-$$</p>
+<p>1.定义权重函数</p>
 
-<p>k-近邻算法步骤如下：</p>
+<pre><code>def weight_variable(shape):
+    # 使用正态分布填充变量，标准差设置为0.1
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    #返回相应的变量
+    return tf.Variable(initial)
+</code></pre>
 
-<p>计算已知类别数据集中的点与当前点之间的距离；
-按照距离递增次序排序；
-选取与当前点距离最小的k个点；
-确定前k个点所在类别的出现频率；
-返回前k个点所出现频率最高的类别作为当前点的预测分类。</p>
+<p>2.定义偏置函数</p>
 
-<p>比如，现在我这个k值取3，那么在电影例子中，按距离依次排序的三个点分别是动作片(108,5)、动作片(115,8)、爱情片(5,89)。
-在这三个点中，动作片出现的频率为三分之二，爱情片出现的频率为三分之一，所以该红色圆点标记的电影为动作片。
-这个判别过程就是k-近邻算法。</p>
+<pre><code>def bias_Variable(shape):
+    # 定义一个常量该常量全部由0.1组成，shape由参数shape指定
+    initial = tf.constant(0.1, shape=shape)
+    # 返回一个变量，变量的值由刚刚定义的常量决定
+    return tf.Variable(initial)
+</code></pre>
 
-<p>from：<a href="http://cuijiahua.com/blog/2017/11/ml_1_knn.html">http://cuijiahua.com/blog/2017/11/ml_1_knn.html</a></p>
+<p>3.定义卷积层</p>
+
+<pre><code>def conv2d(x, W):
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
+</code></pre>
+
+<p>4.定义池化层</p>
+
+<pre><code>def max_pool(x):
+    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+</code></pre>
+
+<p>5.定义CNN网络结构</p>
+
+<pre><code># 构建网络，由2个卷积层（包含激活层、池化层），一个全连接层，一个dropout层，一个softmax层 组成
+def deepnn(x):
+    x_image = tf.reshape(x, [-1, 28, 28, 1])
+    W_conv1 = weight_variable([5, 5, 1, 32])
+    b_conv1 = bias_variable([32])
+    h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1)+b_conv1)
+    h_pool1 = max_pool(h_conv1)
+
+    W_conv2 = weight_variable([5, 5, 32, 64])
+    b_conv2 = bias_variable([64])
+    h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2)+b_conv2)
+    h_pool2 = max_pool(h_conv2)
+
+    W_fc1 = weight_variable([7*7*64, 1024])
+    b_fc1 = bias_variable([1024])
+    # reshape成向量
+  h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
+    h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1)+b_fc1)
+
+    keep_prob = tf.placeholder(tf.float32)
+    # dropout层
+  h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
+
+    W_fc2 = weight_variable([1024, 10])
+    b_fc2 = bias_variable([10])
+    # softmax层
+  y_predict = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2)+b_fc2)
+
+    return keep_prob, y_predict
+</code></pre>
+
+<p>6.定义损失函数、参数优化器</p>
+
+<pre><code># 定义交叉熵函数，即我们使用的loss函数，我们的目的就是在训练过程中使得loss函数尽可能的小。
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_actual*tf.log(y_predict), reduction_indices=[1]))
+# 使用AdamOptimizer进行loss函数的优化。使用ADAM优化算法，它对每个权值都计算自适应的学习速率，收敛速度比一般的梯度下降法更快。
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+</code></pre>
+
+<p>7.定义预测函数、准确率验证</p>
+
+<pre><code># 定义预测函数，这里比较预测结果和实际结果的相匹配的数量
+correct_prediction = tf.equal(tf.argmax(y_predict, 1), tf.argmax(y_actual, 1))
+# 精确度计算
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+</code></pre>
+
+<p>8.连接session，训练模型</p>
+
+<pre><code>sess = tf.InteractiveSession()
+sess.run(tf.global_variables_initializer())
+for i in range(20000):
+    # 每次50张图片
+    batch = mnist.train.next_batch(50)
+    # 每训练100次，验证一次
+    if i%100 ==0:
+        train_acc = accuracy.eval(feed_dict={x:batch[0], y_actual: batch[1], keep_prob:1.0})
+        print 'step %d, training accuracy %g' % (i, train_acc)
+        train_step.run(feed_dict={x:batch[0], y_actual:batch[1], keep_prob:0.5})
+
+test_acc = accuracy.eval(feed_dict={x: mnist.test.images, y_actual:mnist.test.labels, keep_prob:1.0})
+print &quot;test accuracy %g&quot; % test_acc
+</code></pre>
+
+<p>由于Tensorflow的后台计算是依赖于高效的C++，因此我们需要连接到后台去运行。与后台的连接称为一个session会话。也就是说，前面搭建CNN的过程其实就是先构建一个graph图，然后在session里运行它。这就像我们家里要用自来水，就必须先接好水管，然后自来水才能在水管里运行流动。</p>
 
   </div>
   <footer>
@@ -84,7 +167,7 @@ $$</p>
 <script src="/js/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    id: 'k-nearest-neighbors',
+    id: 'tensorflow-cnn-mnist',
     owner: 'zhousenbiao',
     repo: 'zhousenbiao.github.io',
     oauth: {
@@ -116,15 +199,10 @@ var jiathis_config = {data_track_clickback:'true'};
       
       <div id="pagenavigation-next-prev">
         
-        <div id="pagenavigation-next">
-          <span class="pagenav-label">Previous</span>
-          <a href="http://senbiao.org/post/tensorflow-cnn-pool-convolutional/">利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层</a>
-        </div>
-        
         
         <div id="pagenavigation-prev">
           <span class="pagenav-label">Next</span>
-          <a href="http://senbiao.org/post/math-ml/">机器学习涉及的数学知识</a>
+          <a href="http://senbiao.org/post/tensorflow-cnn-pool-convolutional/">利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层</a>
         </div>
         
       </div>

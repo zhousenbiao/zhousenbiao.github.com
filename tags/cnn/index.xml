@@ -18,5 +18,14 @@
       <description>卷积神经网络，CNN（Convolutional Neural Network），卷积神经网络是一种多层神经网络，擅长处理图像相关的深度学习问题。 与普通神经网络的区别在于，卷积神经网络包含了由卷积层（Convolutional layer）和池化层（Pooling layer）构成的特征抽取器。 本文旨在通过调用tensorflow封装好的卷积操作和池化操作函数以及python的matplotlib库，直观地感受一张图片经过卷积层和池化层之后的效果，代码如下： #!/usr/bin/python -- coding: UTF-8 -- import matplotlib.pyplot as plt import tensorflow as tf from PIL import Image import numpy img = Image.open(&amp;lsquo;dog.jpg&amp;rsquo;) img_ndarray = numpy.asarray(img, dtype=&amp;lsquo;float32&amp;rsquo;) print(img_ndarray.shape) img_ndarray=img_ndarray[:,:,0] plt.figure() plt.subplot(221) plt.imshow(img_ndarray) w=[[-1.0,-1.0,-1.0], [-1.0,9.0,-1.0], [-1.0,-1.0,-1.0]] with tf.Session() as sess: img_ndarray=tf.reshape(img_ndarray,[1, 633, 650,1]) w=tf.reshape(w,[3,3,1,1]) img_cov=tf.nn.conv2d(img_ndarray, w, strides=[1, 1, 1, 1], padding=&amp;lsquo;SAME&amp;rsquo;) image_data=sess.run(img_cov) print(image_data.shape) plt.subplot(222) plt.imshow(image_data[0,:,:,0]) img_pool=tf.nn.max_pool(img_ndarray, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding=&#39;SAME&#39;)</description>
     </item>
     
+    <item>
+      <title>利用Tensorflow构建CNN，步骤梳理</title>
+      <link>http://senbiao.org/post/tensorflow-cnn-mnist/</link>
+      <pubDate>Fri, 08 Dec 2017 13:04:48 +0800</pubDate>
+      
+      <guid>http://senbiao.org/post/tensorflow-cnn-mnist/</guid>
+      <description>利用Tensorflow构建CNN卷积神经网络，以mnist手写识别为例，步骤梳理如下： 1.定义权重函数 def weight_variable(shape): # 使用正态分布填充变量，标准差设置为0.1 initial = tf.truncated_normal(shape, stddev=0.1) #返回相应的变量 return tf.Variable(initial) 2.定义偏置函数 def bias_Variable(shape): # 定义一个常量该常量全部由0.1组成，shape由参数shape指定 initial = tf.constant(0.1, shape=shape) # 返回一个变量，变量的值由刚刚定义的常量决定 return tf.Variable(initial) 3.定义卷积层 def conv2d(x, W): return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding=&#39;SAME&#39;) 4.定义池化层 def max_pool(x): return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding=&#39;SAME&#39;) 5.定义CNN网络结构 # 构建网络，由2个卷积层（包含激活层、池化层），一个全连接层，一个dropout层，一个softmax层 组成 def deepnn(x): x_image = tf.reshape(x, [-1, 28, 28, 1]) W_conv1 = weight_variable([5, 5, 1,</description>
+    </item>
+    
   </channel>
 </rss>
