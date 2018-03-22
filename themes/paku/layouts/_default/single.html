@@ -1,0 +1,80 @@
+{{ partial "header.html" . }}
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        <span class="posttime">{{ .Date.Format "2006/01/02" }}</span>
+        {{ partial "tags.html" . }}
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    {{ .Content }}
+  </div>
+  <footer>
+    <div class="article-footer">
+  <!--    {{ partial "tags.html" . }}-->
+      {{ with .Site.Params.adsense.content }}
+      <div class="adsense">
+        <span class="sponsor-label">Sponsored link</span>
+        {{ partial . }}
+      </div>
+      {{ end }}
+
+
+{{ if (.Params.gitment) }}
+<div id="git-comments"></div>
+<link rel="stylesheet" type="text/css" href="{{ "/css/gitment.css" | relURL }}">
+<script src="/js/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: '{{ .Slug }}',
+    owner: 'zhousenbiao',
+    repo: 'zhousenbiao.github.io',
+    oauth: {
+      client_id: '0f728902ed3e20e8c5a4',
+      client_secret: 'ef35c1eb7e28ada17f4711b2a88f364b484a38fe',
+    }
+  })
+  gitment.render('git-comments')
+</script>
+{{ end }}
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_4"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a href="http://www.jiathis.com/share?uid=2159567" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2159567" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+    <!--  {{ template "_internal/disqus.html" . }}-->
+      {{ if or .Prev .Next }}
+      <div id="pagenavigation-next-prev">
+        {{ if .Next }}
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="{{ .Next.Permalink }}">{{ .Next.Title }}</a>
+        </div>
+        {{ end }}
+        {{ if .Prev }}
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}</a>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </footer>
+</div><!-- .article -->
+{{ partial "footer.html" . }}

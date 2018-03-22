@@ -1,7 +1,7 @@
 baseurl = "http://senbiao.org/"
 languageCode = "en-us"
 title = "周森标博客"
-theme= "geppaku"
+theme= "paku"
 #disqusShortname = "senbiao" # Optional
 
 [author]
