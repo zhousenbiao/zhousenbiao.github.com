@@ -5,6 +5,7 @@ categories = ["机器学习"]
 slug = "k-nearest-neighbors"
 tags = ["KNN"]
 gitment = true
+draft = false
 
 +++
 k-近邻算法，目的就是找到新数据的前k个邻居，然后根据邻居的分类来确定该数据的分类。

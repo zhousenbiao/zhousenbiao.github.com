@@ -1,6 +1,6 @@
 +++
 date = "2017-12-08T13:04:48+08:00"
-draft = true
+draft = false
 gitment = true
 slug = "tensorflow-cnn-mnist"
 title = "利用Tensorflow构建CNN，步骤梳理"

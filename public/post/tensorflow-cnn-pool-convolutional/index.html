@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.16-DEV" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="http://senbiao.org/index.xml" rel="alternate" type="application/rss+xml" title="周森标博客" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层 | 周森标博客</title>
+  </head>
+  <body>
+    <div id="wrap">
+     
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="http://senbiao.org/">周森标博客</a>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层</h1>
+      <div class="article-meta">
+        <span class="posttime">2018/01/16</span>
+        
+<div class="tags">
+  <ul>
+    
+    <li>
+        <a href="/tags/tensorflow">tensorflow</a>
+    </li>
+    
+    <li>
+        <a href="/tags/cnn">CNN</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    
+
+<p>卷积神经网络，CNN（Convolutional Neural Network），卷积神经网络是一种多层神经网络，擅长处理图像相关的深度学习问题。 与普通神经网络的区别在于，卷积神经网络包含了由卷积层（Convolutional layer）和池化层（Pooling layer）构成的特征抽取器。 本文旨在通过调用tensorflow封装好的卷积操作和池化操作函数以及python的matplotlib库，直观地感受一张图片经过卷积层和池化层之后的效果，代码如下：</p>
+
+<p>#!/usr/bin/python</p>
+
+<h1 id="coding-utf-8:9814740b0e7db844707930e3c242433f">-<em>- coding: UTF-8 -</em>-</h1>
+
+<p>import matplotlib.pyplot as plt
+import tensorflow as tf
+from PIL import Image
+import numpy</p>
+
+<p>img = Image.open(&lsquo;dog.jpg&rsquo;)
+img_ndarray = numpy.asarray(img, dtype=&lsquo;float32&rsquo;)
+print(img_ndarray.shape)
+img_ndarray=img_ndarray[:,:,0]
+plt.figure()
+plt.subplot(221)
+plt.imshow(img_ndarray)</p>
+
+<p>w=[[-1.0,-1.0,-1.0],
+   [-1.0,9.0,-1.0],
+   [-1.0,-1.0,-1.0]]</p>
+
+<p>with tf.Session() as sess:
+    img_ndarray=tf.reshape(img_ndarray,[1, 633, 650,1])
+    w=tf.reshape(w,[3,3,1,1])
+    img_cov=tf.nn.conv2d(img_ndarray, w, strides=[1, 1, 1, 1], padding=&lsquo;SAME&rsquo;)
+    image_data=sess.run(img_cov)
+    print(image_data.shape)
+    plt.subplot(222)
+    plt.imshow(image_data[0,:,:,0])</p>
+
+<pre><code>img_pool=tf.nn.max_pool(img_ndarray, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1],
+               padding='SAME')
+image_data = sess.run(img_pool)
+plt.subplot(223)
+plt.imshow(image_data[0, :, :, 0])
+plt.subplot(224)
+img_pool = tf.nn.max_pool(img_ndarray, ksize=[1, 4, 4, 1], strides=[1, 4, 4, 1],
+                          padding='SAME')
+image_data = sess.run(img_pool)
+plt.imshow(image_data[0, :, :, 0])
+plt.show()
+</code></pre>
+
+  </div>
+  <footer>
+    <div class="article-footer">
+  
+      
+
+
+
+<div id="git-comments"></div>
+<link rel="stylesheet" type="text/css" href="/css/gitment.css">
+<script src="/js/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: 'tensorflow-cnn-pool-convolutional',
+    owner: 'zhousenbiao',
+    repo: 'zhousenbiao.github.io',
+    oauth: {
+      client_id: '0f728902ed3e20e8c5a4',
+      client_secret: 'ef35c1eb7e28ada17f4711b2a88f364b484a38fe',
+    }
+  })
+  gitment.render('git-comments')
+</script>
+
+
+
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_4"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a href="http://www.jiathis.com/share?uid=2159567" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2159567" charset="utf-8"></script>
+
+
+
+    
+      
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="http://senbiao.org/post/tensorflow-cnn-mnist/">利用Tensorflow构建CNN，步骤梳理</a>
+        </div>
+        
+        
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="http://senbiao.org/post/k-nearest-neighbors/">K-近邻算法学习笔记</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+</div>
+        </div>
+        <div class="sidebar">
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>About this blog</span>
+    </div>
+    <div id="author">
+      <span>本博客专注AI、机器学习、深度学习、算法及数据科学，欢迎围观。</span>
+      <a href="http://senbiao.github.io/">旧版博客</a>不再更新。
+      <div>
+         
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Categories</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80"><span></span>数学基础 (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span></span>机器学习 (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span></span>深度学习 (2)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span></span>算法基础 (1)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="http://senbiao.org/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by Hugo.</span>
+            <span>
+              
+              Copyright (c) 2018, <a href="http://senbiao.org/">周森标博客</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
