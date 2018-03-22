@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>周森标博客</title>
+    <link>http://senbiao.org/</link>
+    <description>Recent content on 周森标博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Mar 2018 14:01:42 +0800</lastBuildDate>
+    <atom:link href="http://senbiao.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>常见排序算法分类</title>
+      <link>http://senbiao.org/post/algorithms/</link>
+      <pubDate>Wed, 21 Mar 2018 14:01:42 +0800</pubDate>
+      
+      <guid>http://senbiao.org/post/algorithms/</guid>
+      <description>常见排序算法一般分为以下几种： 非线性时间比较类排序：交换类排序（快速排序和冒泡排序）、插入类排序（简单插入排序和希尔排序）、选择类排序（简单选择排序和堆排序）、归并排序（二路归并排序和多路归并排序）； 线性时间非比较类排序：计数排序、基数排序和桶排序。 总结： 在比较类排序中，归并排序最快，其次是快速排序和堆排序，两者不相伯仲，但是有一点需要注意，数据初始排序状态对堆排序不会产生太大的影响，而快速排序却恰恰相反。 线性时间非比较类排序一般要优于非线性时间比较类排序，但前者对待排序元素的要求较为严格，比如计数排序要求待排序数的最大值不能太大，桶排序要求元素按照hash分桶后桶内元素的数量要均匀。线性时间非比较类排序的典型特点是以空间换时间。</description>
+    </item>
+    
+    <item>
+      <title>K-近邻算法学习笔记</title>
+      <link>http://senbiao.org/post/k-nearest-neighbors/</link>
+      <pubDate>Mon, 19 Mar 2018 14:38:50 +0800</pubDate>
+      
+      <guid>http://senbiao.org/post/k-nearest-neighbors/</guid>
+      <description>k-近邻算法，目的就是找到新数据的前k个邻居，然后根据邻居的分类来确定该数据的分类。 所谓邻居，就是距离近的。因此需要一个“距离度量”，以2个特征的样本为例，也就是在2维实数向量空间，可以使用两点距离公式计算距离： $$ \sqrt{(x1-x2)^2+(y1-y2)^2} $$ k-近邻算法步骤如下： 计算已知类别数据集中的点与当前点之间的距离； 按照距离递增次序排序； 选取与当前点距离最小的k个点； 确定前k个点所在类别的出现频率； 返回前k个点所出现频率最高的类别作为当前点的预测分类。 比如，现在我这个k值取3，那么在电影例子中，按距离依次排序的三个点分别是动作片(108,5)、动作片(115,8)、爱情片(5,89)。 在这三个点中，动作片出现的频率为三分之二，爱情片出现的频率为三分之一，所以该红色圆点标记的电影为动作片。 这个判别过程就是k-近邻算法。 from：http://cuijiahua.com/blog/2017/11/ml_1_knn.html</description>
+    </item>
+    
+    <item>
+      <title>利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层</title>
+      <link>http://senbiao.org/post/tensorflow-cnn-pool-convolutional/</link>
+      <pubDate>Tue, 16 Jan 2018 21:43:25 +0800</pubDate>
+      
+      <guid>http://senbiao.org/post/tensorflow-cnn-pool-convolutional/</guid>
+      <description>卷积神经网络，CNN（Convolutional Neural Network），卷积神经网络是一种多层神经网络，擅长处理图像相关的深度学习问题。 与普通神经网络的区别在于，卷积神经网络包含了由卷积层（Convolutional layer）和池化层（Pooling layer）构成的特征抽取器。 本文旨在通过调用tensorflow封装好的卷积操作和池化操作函数以及python的matplotlib库，直观地感受一张图片经过卷积层和池化层之后的效果，代码如下： #!/usr/bin/python -- coding: UTF-8 -- import matplotlib.pyplot as plt import tensorflow as tf from PIL import Image import numpy img = Image.open(&amp;lsquo;dog.jpg&amp;rsquo;) img_ndarray = numpy.asarray(img, dtype=&amp;lsquo;float32&amp;rsquo;) print(img_ndarray.shape) img_ndarray=img_ndarray[:,:,0] plt.figure() plt.subplot(221) plt.imshow(img_ndarray) w=[[-1.0,-1.0,-1.0], [-1.0,9.0,-1.0], [-1.0,-1.0,-1.0]] with tf.Session() as sess: img_ndarray=tf.reshape(img_ndarray,[1, 633, 650,1]) w=tf.reshape(w,[3,3,1,1]) img_cov=tf.nn.conv2d(img_ndarray, w, strides=[1, 1, 1, 1], padding=&amp;lsquo;SAME&amp;rsquo;) image_data=sess.run(img_cov) print(image_data.shape) plt.subplot(222) plt.imshow(image_data[0,:,:,0]) img_pool=tf.nn.max_pool(img_ndarray, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding=&#39;SAME&#39;)</description>
+    </item>
+    
+  </channel>
+</rss>

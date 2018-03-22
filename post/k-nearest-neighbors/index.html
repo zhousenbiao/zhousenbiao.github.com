@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.16-DEV" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="http://senbiao.org/index.xml" rel="alternate" type="application/rss+xml" title="周森标博客" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>K-近邻算法学习笔记 | 周森标博客</title>
+  </head>
+  <body>
+    <div id="wrap">
+     
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="http://senbiao.org/">周森标博客</a>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>K-近邻算法学习笔记</h1>
+      <div class="article-meta">
+        <span class="posttime">2018/03/19</span>
+        
+<div class="tags">
+  <ul>
+    
+    <li>
+        <a href="/tags/knn">KNN</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <p>k-近邻算法，目的就是找到新数据的前k个邻居，然后根据邻居的分类来确定该数据的分类。
+所谓邻居，就是距离近的。因此需要一个“距离度量”，以2个特征的样本为例，也就是在2维实数向量空间，可以使用两点距离公式计算距离：</p>
+
+<p>$$
+\sqrt{(x1-x2)^2+(y1-y2)^2}
+$$</p>
+
+<p>k-近邻算法步骤如下：</p>
+
+<p>计算已知类别数据集中的点与当前点之间的距离；
+按照距离递增次序排序；
+选取与当前点距离最小的k个点；
+确定前k个点所在类别的出现频率；
+返回前k个点所出现频率最高的类别作为当前点的预测分类。</p>
+
+<p>比如，现在我这个k值取3，那么在电影例子中，按距离依次排序的三个点分别是动作片(108,5)、动作片(115,8)、爱情片(5,89)。
+在这三个点中，动作片出现的频率为三分之二，爱情片出现的频率为三分之一，所以该红色圆点标记的电影为动作片。
+这个判别过程就是k-近邻算法。</p>
+
+<p>from：<a href="http://cuijiahua.com/blog/2017/11/ml_1_knn.html">http://cuijiahua.com/blog/2017/11/ml_1_knn.html</a></p>
+
+  </div>
+  <footer>
+    <div class="article-footer">
+  
+      
+
+
+
+<div id="git-comments"></div>
+<link rel="stylesheet" type="text/css" href="/css/gitment.css">
+<script src="/js/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: 'k-nearest-neighbors',
+    owner: 'zhousenbiao',
+    repo: 'zhousenbiao.github.io',
+    oauth: {
+      client_id: '0f728902ed3e20e8c5a4',
+      client_secret: 'ef35c1eb7e28ada17f4711b2a88f364b484a38fe',
+    }
+  })
+  gitment.render('git-comments')
+</script>
+
+
+
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_4"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a href="http://www.jiathis.com/share?uid=2159567" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2159567" charset="utf-8"></script>
+
+
+
+    
+      
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="http://senbiao.org/post/tensorflow-cnn-pool-convolutional/">利用Tensorflow和matplotlib直观理解CNN的卷积层与池化层</a>
+        </div>
+        
+        
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="http://senbiao.org/post/algorithms/">常见排序算法分类</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+</div>
+        </div>
+        <div class="sidebar">
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>About this blog</span>
+    </div>
+    <div id="author">
+      <span>本博客专注AI、机器学习、深度学习、算法及数据科学，欢迎围观。</span>
+      <a href="http://senbiao.github.io/">旧版博客</a>不再更新。
+      <div>
+         
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Categories</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span></span>机器学习 (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span></span>深度学习 (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span></span>算法基础 (1)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="http://senbiao.org/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by Hugo.</span>
+            <span>
+              
+              Copyright (c) 2018, <a href="http://senbiao.org/">周森标博客</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
