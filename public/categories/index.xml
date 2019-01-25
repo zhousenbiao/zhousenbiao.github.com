@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 周森标博客</title>
+    <link>http://senbiao.org/categories/</link>
+    <description>Recent content in Categories on 周森标博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>数学基础</title>
+      <link>http://senbiao.org/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 19 Mar 2018 15:17:26 +0800</pubDate>
+      
+      <guid>http://senbiao.org/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>http://senbiao.org/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 19 Mar 2018 14:38:50 +0800</pubDate>
+      
+      <guid>http://senbiao.org/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>深度学习</title>
+      <link>http://senbiao.org/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 02 Aug 2018 15:04:05 +0800</pubDate>
+      
+      <guid>http://senbiao.org/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法基础</title>
+      <link>http://senbiao.org/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 21 Mar 2018 14:01:42 +0800</pubDate>
+      
+      <guid>http://senbiao.org/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
