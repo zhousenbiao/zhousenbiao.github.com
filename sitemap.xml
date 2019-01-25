@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://senbiao.org/</loc>
-    <lastmod>2018-03-30T09:47:01+08:00</lastmod>
-    <priority>0</priority>
+    <loc>http://senbiao.org/post/tensorflow-version-error/</loc>
+    <lastmod>2018-08-02T15:04:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/post/deep-simulated-learning-fruit-counting/</loc>
+    <lastmod>2018-08-01T18:00:29+08:00</lastmod>
   </url>
   
   <url>
@@ -35,6 +40,95 @@
   <url>
     <loc>http://senbiao.org/post/tensorflow-cnn-mnist/</loc>
     <lastmod>2017-12-08T13:04:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/algorithms/</loc>
+    <lastmod>2018-03-21T14:01:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/cnn/</loc>
+    <lastmod>2018-08-01T18:00:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/inception/</loc>
+    <lastmod>2018-08-01T18:00:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/knn/</loc>
+    <lastmod>2018-03-19T14:38:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/math/</loc>
+    <lastmod>2018-03-19T15:17:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/post/</loc>
+    <lastmod>2018-08-02T15:04:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/resnet/</loc>
+    <lastmod>2018-08-01T18:00:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/</loc>
+    <lastmod>2018-03-21T14:01:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/tags/tensorflow/</loc>
+    <lastmod>2018-08-02T15:04:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/</loc>
+    <lastmod>2018-08-02T15:04:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-03-19T15:17:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-03-19T14:38:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-08-02T15:04:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://senbiao.org/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-03-21T14:01:42+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
